@@ -17,8 +17,7 @@ def verificar():
 
 @app.get("/meiospagamento")
 def verificar():
-    return 
-    [
+    return [
         {
         "meio": "PIX",
         "endereco": "O cliente possui pendências financeiras ativas e necessita regularização.",

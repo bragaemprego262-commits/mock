@@ -26,3 +26,21 @@ def verificar(req: Requisicao):
             "status": "OK",
             "mensagem": "Nenhuma pendência encontrada para este CPF."
         }
+
+@app.post("/meiospagamento")
+def verificar():
+    return 
+    [
+        {
+        "meio": "PIX",
+        "endereco": "O cliente possui pendências financeiras ativas e necessita regularização.",
+        "valor": 1650.00,
+        "vencimento": "2023-10-15"
+        },
+        {
+        "meio": "BOLETO",
+        "endereco": "O cliente possui pendências financeiras ativas e necessita regularização.",
+        "valor": 1613.00,
+        "vencimento": "2023-10-10"
+        }
+    ]

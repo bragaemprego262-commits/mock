@@ -15,6 +15,40 @@ def verificar():
         "vencimento": "2025-10-15"
     }
 
+@app.get("/options")
+def opcoes():
+    return {
+        "status": "PENDENTE",
+        "mensagem": "O cliente possui pendências financeiras ativas e necessita regularização.",
+        "cpf": "11112398712",
+        "valor_original": 1670.00,
+        "vencimento": "2025-10-15",
+        "opcoes": [
+            {
+                "id": 1,
+                "descricao": "Pagamento à vista com 15% de desconto",
+                "total": 1419.5,
+                "detalhes": "Totalizando R$ 1419.5"
+            },
+            {
+                "id": 2,
+                "descricao": "Parcelamento em 3 vezes",
+                "total": 1732.5,
+                "valor_parcela": 577.5,
+                "primeiro_pagamento": "2024-06-05",
+                "detalhes": "3 parcelas de R$ 577.5"
+            },
+            {
+                "id": 3,
+                "descricao": "Parcelamento em 6 vezes",
+                "total": 1815.0,
+                "valor_parcela": 302.5,
+                "primeiro_pagamento": "2024-06-05",
+                "detalhes": "6 parcelas de R$ 302.5"
+            }
+        ]
+    }
+
 @app.get("/meiospagamento")
 def verificar():
     return [
